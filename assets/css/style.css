@@ -1,0 +1,78 @@
+body {
+    background-color: var(--wine);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: center; /* centraliza o grupo no topo */
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Contêiner da seta + título */
+.titulo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre a seta e o texto */
+}
+
+/* Texto "Mensalidade" */
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Botão da seta */
+.btn-voltar {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Texto "Mensalidade pendente:" */
+.status {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px;
+}
+.card {
+  background-color: #572013; /* fundo do quadrado */
+  border-radius: 15px;       /* cantos arredondados */
+  border: 1px solid #AE621A;
+  padding: 15px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+}
+.card2 {
+  background-color: #491312; /* fundo do quadrado */
+  border-radius: 15px;       /* cantos arredondados */
+  padding: 15px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+}
+
+.card3 {
+    display: flex;
+    flex-direction: line;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.iconsText {
+    color: #9ba2ae;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+
