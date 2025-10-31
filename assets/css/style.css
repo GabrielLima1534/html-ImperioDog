@@ -1,7 +1,10 @@
 body {
-    background-color: var(--wine);
+  max-width: 480px; /* largura típica de celular */
+  margin: 0 auto;   /* centraliza na tela */
+  background-color: var(--wine);
   margin: 0;
   font-family: Arial, sans-serif;
+  padding-bottom: 80px;
 }
 
 /* Cabeçalho */
@@ -52,20 +55,53 @@ h1 {
   color: white;
 }
 .card2 {
+  display: flex;
+  align-items: center;
+  width: 380px;
+  height: 85px;
   background-color: #491312; /* fundo do quadrado */
   border-radius: 15px;       /* cantos arredondados */
   padding: 15px;
-  margin: 20px;
+  margin: 16px auto;
   text-align: center;
-  color: white;
+  color: white;  
+}
+
+.card2 img {
+  width: 32px;
+  height: 34px;
 }
 
 .card3 {
     display: flex;
-    flex-direction: line;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
+
+    position: fixed;   /* ADICIONAR */
+    bottom: 0;         /* ADICIONAR */
+    left: 0;           /* ADICIONAR */
+    width: 100%;       /* ADICIONAR */
+    background-color: var(--wine);
+    padding: 10px 10px;           /* opcional */
+    width: 100%;
+}
+
+.card3 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+
+.card3 img {
+  width: 35px;   /* largura do ícone */
+  height: 38px;  /* altura do ícone */
+  margin-bottom: 4px;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .iconsText {
