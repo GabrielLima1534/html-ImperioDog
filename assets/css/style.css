@@ -45,6 +45,36 @@ h1 {
   font-weight: bold;
   margin: 20px;
 }
+
+
+.boleto-card {
+  position: relative;
+  width: 90%;
+  max-width: 384px;
+  height: 121px; /* 42px + 36px + 43px */
+  background-color: #fff; /* ou a cor do seu card */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding-left: 70px;
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.boleto-icon {
+  position: absolute;           /* fixa o ícone dentro do card */
+  top: 42px;
+  left: 2px;
+  width: 54px;
+  height: 36px;
+}
+
+.boleto-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .card {
   background-color: #572013; /* fundo do quadrado */
   border-radius: 15px;       /* cantos arredondados */
@@ -71,6 +101,22 @@ h1 {
   width: 32px;
   height: 34px;
 }
+
+.icon-bg {
+  width: 65px;
+  height: 65px;
+  background-color: #660f10; /* cor do círculo, pode mudar */
+  border-radius: 50%; /* deixa redondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-bg img {
+  width: 30px; /* tamanho do ícone dentro do círculo */
+  height: 30px;
+}
+
 
 .card3 {
     display: flex;
