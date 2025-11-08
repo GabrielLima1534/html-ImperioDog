@@ -27,67 +27,115 @@ h1 {
   color: white;
   font-weight: bold;
   font-size: 24px;
-  margin: 0;
+  margin: 36px;
 }
 
 /* Botão da seta */
 .btn-voltar {
+  position: absolute;       /* tira do fluxo normal */
+  left: 12px;              /* distância do lado esquerdo */
+  top: 30px;                /* distância do topo */
+  width: 28px;              /* largura */
+  height: 28px;             /* altura */
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 28px;          /* tamanho do ícone */
+  color: white;             /* cor branca */
   cursor: pointer;
 }
 
 /* Texto "Mensalidade pendente:" */
 .status {
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   margin: 20px;
 }
 
-
-.boleto-card {
-  position: relative;
-  width: 90%;
-  max-width: 384px;
-  height: 121px; /* 42px + 36px + 43px */
-  background-color: #fff; /* ou a cor do seu card */
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding-left: 70px;
-  display: flex;
-  align-items: center;
-  margin: 20px auto;
+.valor {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 4px 20px;
 }
 
-.boleto-icon {
-  position: absolute;           /* fixa o ícone dentro do card */
-  top: 42px;
-  left: 2px;
-  width: 54px;
-  height: 36px;
+.vencimento {
+  font-size: 16px;
+  color: white;
+  margin-left: 20px;
 }
 
 .boleto-text {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column; /* empilha os p's */
+  justify-content: center; /* centraliza verticalmente em relação ao ícone */
+  margin-left: 12px; /* espaço entre o ícone e o texto */
+  text-align: left;
 }
+
+.boleto-text p:first-child {
+  font-weight: bold;
+  font-size: 24px;
+  color: white; /* melhora a leitura */
+}
+
+.boleto-text p:last-child {
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.boleto-card {
+  height: 121px;         
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  margin: 14px auto;  /* <-- centraliza horizontalmente */
+  padding: 16px;       /* opcional, para espaçamento interno */
+
+  width: auto; 
+  max-width: 90%; /* para não ultrapassar a tela */
+}
+
+.boleto-icon {
+  width: 54px;
+  height: 36px;
+  margin: auto;
+}
+
+.boleto-text {
+
+}
+
+.boleto-text p:first-child {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+.boleto-text p:last-child {
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
 
 .card {
   background-color: #572013; /* fundo do quadrado */
   border-radius: 15px;       /* cantos arredondados */
   border: 1px solid #AE621A;
   padding: 15px;
-  margin: 20px;
+  margin: 16px auto;
   text-align: center;
   color: white;
+  width: auto; 
+  
 }
 .card2 {
   display: flex;
   align-items: center;
-  width: 380px;
   height: 85px;
   background-color: #491312; /* fundo do quadrado */
   border-radius: 15px;       /* cantos arredondados */
@@ -95,7 +143,30 @@ h1 {
   margin: 16px auto;
   text-align: center;
   color: white;  
+  width: auto; 
+  max-width: 90%;
+  gap: 10px; /* espaço entre ícone e texto */
 }
+
+.card2-text {
+  display: flex;
+  flex-direction: column; /* empilha first e last child */
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.card2-mensalidade { 
+  font-weight: 600;
+  font-size: 20px; 
+  color: white;
+}
+
+.card2-valor { 
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
 
 .card2 img {
   width: 32px;
@@ -123,14 +194,14 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    justify-content: space-around;
     gap: 20px;
-
     position: fixed;   /* ADICIONAR */
     bottom: 0;         /* ADICIONAR */
-    left: 0;           /* ADICIONAR */
-    width: 100%;       /* ADICIONAR */
+    left: 0;           /* ADICIONAR */ 
     background-color: var(--wine);
     padding: 10px 10px;           /* opcional */
+    box-sizing: border-box;
     width: 100%;
 }
 
@@ -155,6 +226,89 @@ h1 {
     font-weight: bold;
     font-size: 16px;
     margin: 0;
+}
+
+.card-perfil {
+  height: 85px;
+  border-radius: 15px;
+  width: auto; 
+  max-width: 90%;
+  background-color: #491312;
+}
+
+.subtexto {
+  color: #a8a29e;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card-perfil {
+  display: flex;
+  align-items: center;      /* centraliza verticalmente */
+  justify-content: space-between; /* espaço entre conteúdo e seta */
+  background-color: #491312; 
+  border-radius: 15px;
+  padding: 15px;
+  margin: 16px auto;
+  max-width: 90%;
+  height: 85px;
+  color: white;
+  gap: 10px;
+}
+
+.card-perfil .icon-bg {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #660f10; /* sempre do mesmo tamanho */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* impede que encolha */
+}
+
+.card-perfil .icon-bg img {
+  max-width: 50%;  /* ícone se ajusta dentro do círculo */
+  max-height: 50%;
+  object-fit: contain;
+}
+
+
+.card-perfil .icon-bg img.sininho {
+  width: 32px;
+  height: 40px; /* apenas o ícone especial */
+}
+
+.card-perfil .card2-mensalidade {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.card-perfil .subtexto {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  color: #ccc;
+}
+
+.card-perfil img:last-child {
+  width: 20px;  /* seta */
+  height: 20px;
+}
+
+.Perfil-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre ícone e texto */
+}
+
+.card-perfil .card2-text {
+  display: flex;
+  flex-direction: column; /* empilha título e subtexto */
+  justify-content: center; /* centraliza verticalmente em relação ao ícone */
+  align-items: flex-start; /* alinha à esquerda */
+  gap: 2px; /* espaço entre título e subtexto */
 }
 
 
